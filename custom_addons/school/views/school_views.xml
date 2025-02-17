@@ -1,0 +1,28 @@
+<odoo>
+    <record id="action_school" model="ir.actions.act_window">
+        <field name="name">School</field>
+        <field name="res_model">school.school</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new school list
+            </p>
+        </field>
+    </record>
+
+    <!-- Root menu -->
+    <menuitem id="root_menu_school"
+              name="School"
+              web_icon="school,static/description/icon.png"/>
+
+    <!-- First level menu -->
+    <menuitem id="first_level_menu_cv"
+              name="Curriculum Vitae"
+              parent="root_menu_school"/>
+
+    <!-- Correctly referencing the root menu -->
+    <menuitem id="first_level_menu_school"
+              name="School"
+              parent="root_menu_school"
+              action="action_school"/>
+</odoo>

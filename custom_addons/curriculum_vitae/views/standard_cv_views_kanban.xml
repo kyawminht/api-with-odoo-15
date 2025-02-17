@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="standard_cv_views_kanban" model="ir.ui.view">
+            <field name="name">standard.cv.kanban</field>
+            <field name="model">standard.cv</field>
+            <field name="arch" type="xml">
+                <kanban>
+                      <field name="name"/>
+                    <field name="dob"/>
+                    <field name="nationality"/>
+                    <field name="gender"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_details">
+
+                                  <strong> <field name="name"/></strong>
+                                    <field name="dob"/>
+                                    <field name="nationality"/>
+                                    <field name="gender"/>
+
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>
